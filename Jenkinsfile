@@ -7,7 +7,7 @@ pipeline {
 				steps {
 					dir('code') {
 						echo "starting APIScript......"
-						git([url: 'git@github.com:LeePuvier/Java-Dubbo-ZookeeperSpring-Mybatis.git', branch: env.CaseBranch, credentialsId: '297fc1a8-893a-4972-9a29-03d0ef67f2d3'])
+						git([url: 'git@github.com:LeePuvier/Java-Dubbo-ZookeeperSpring-Mybatis.git', branch: env.CaseBranch, credentialsId: '0f583688-7da2-4abd-a5cd-3b40fa1a73a6'])
 					}
 				}
       }
