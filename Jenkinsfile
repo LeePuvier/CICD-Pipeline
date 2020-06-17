@@ -1,5 +1,7 @@
 pipeline {
 
+    agent any
+
     stages {
       stage('Check Out Code') {
 				steps {
