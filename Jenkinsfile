@@ -16,7 +16,7 @@ pipeline {
 				steps {
 					dir('code') {
 						echo "starting Testing......"
-							withMaven(maven: 'maven') {        
+							//withMaven(maven: 'maven') {        
 								script {
 									try {
 										sh "mvn clean test"
@@ -24,7 +24,7 @@ pipeline {
 										echo 'Some TestCase failed'
 									}
 								}
-							}
+							//}
 					}
 				}
 	    }
