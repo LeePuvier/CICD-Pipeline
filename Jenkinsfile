@@ -16,7 +16,7 @@ pipeline {
 				steps {
 					dir('code') {
 						echo "starting Testing......"
-							withMaven(globalMavenSettingsConfig: '80d7f536-d473-44a8-9edf-60630acc7d72', jdk: 'Oracle JDK 8', maven: 'Maven 3.5.0', mavenSettingsConfig: 'bfa90212-2742-4611-aa71-8e0ec76d0c28') {        
+							withMaven(maven: 'maven') {        
 								script {
 									try {
 										sh "mvn clean test"
