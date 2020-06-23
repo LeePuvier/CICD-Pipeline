@@ -38,8 +38,8 @@ pipeline {
 		        echo "Start create sonar file......"
 						script {
 							sh "ls"
-							sh "chmod +x -R UnitTestHttp"
-							sh "generate_sonar_file.sh UnitTestHttp"
+							sh "chmod +x -R code"
+							sh "UnitTestHttp/generate_sonar_file.sh code"
 						}
           }
         }
