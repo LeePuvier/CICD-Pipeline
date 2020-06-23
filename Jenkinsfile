@@ -37,8 +37,9 @@ pipeline {
         steps {
 		        echo "Start create sonar file......"
 						script {
-							sh "chmod +x -R ${JOB_NAME}"
-							sh "${JOB_NAME}/generate_sonar_file.sh code"
+							sh "ls"
+							sh "chmod +x -R UnitTestHttp"
+							sh "generate_sonar_file.sh UnitTestHttp"
 						}
           }
         }
