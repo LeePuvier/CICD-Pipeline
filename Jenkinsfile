@@ -39,6 +39,7 @@ pipeline {
 						script {
 							sh "ls"
 							sh "chmod +x -R code"
+							sh "chmod +x -R UnitTestHttp"
 							sh "UnitTestHttp/generate_sonar_file.sh code"
 						}
           }
