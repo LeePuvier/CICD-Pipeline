@@ -15,14 +15,14 @@ def send(to_list,cc_list,sub,content,file):
     :param sub: 邮件标题
     :param content: 内容
     '''
-    me = "test@163.net"
+    me = "li_pjun@163.com"
     server_host = 'smtp.exmail.qq.com'
     smtpPort = '25'
     sslPort  = '465'
 
 
-    username = 'test@163.net'
-    password = '1234567'
+    username = 'li_pjun@163.com'
+    password = '168lipengjun'
     # _subtype 可以设为html,默认是plain
     # msg = MIMEText(content, _subtype='plain')
     # msg = MIMEText(content, _subtype='html')
