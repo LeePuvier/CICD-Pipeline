@@ -37,7 +37,6 @@ pipeline {
         steps {
 		        echo "Start create sonar file......"
 						script {
-							sh "ls"
 							sh "chmod +x -R code"
 							sh "chmod +x -R UnitTestHttp"
 							sh "UnitTestHttp/generate_sonar_file.sh code"
@@ -50,7 +49,6 @@ pipeline {
             echo "starting excute sonar scanner......"
             dir('code') {
                 script {
-                	sh "ls"
 									def sonarqubeScannerHome = tool name: 'sonarscanner'
                     	withSonarQubeEnv('sonar') {
                         	sh "${sonarqubeScannerHome}/bin/sonar-scanner"
@@ -80,7 +78,8 @@ pipeline {
 				echo "starting send emails......"
 				wrap([$class: 'BuildUser']) {
 					script {
-						sh "${JOB_NAME}/sendEmails.sh code ${JOB_NAME}"
+						sh "ls"
+						#sh "${JOB_NAME}/UnitTestHttp/sendEmails.sh code ${JOB_NAME}"
 					}
 				}
 			}
