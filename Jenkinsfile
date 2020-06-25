@@ -79,7 +79,7 @@ pipeline {
 				wrap([$class: 'BuildUser']) {
 					script {
 						sh "ls"
-						sh "UnitTestHttp/sendEmails.sh code ${JOB_NAME}"
+						sh "UnitTestHttp/sendEmails.sh code UnitTestHttp"
 					}
 				}
 			}
