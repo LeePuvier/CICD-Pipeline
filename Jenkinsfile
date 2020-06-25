@@ -50,6 +50,7 @@ pipeline {
             echo "starting excute sonar scanner......"
             dir('code') {
                 script {
+                	sh "ls"
 									def sonarqubeScannerHome = tool name: 'sonarscanner'
                     	withSonarQubeEnv('sonar') {
                         	sh "${sonarqubeScannerHome}/bin/sonar-scanner"

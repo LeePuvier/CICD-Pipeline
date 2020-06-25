@@ -27,10 +27,10 @@ sonar.sourceEncoding=UTF-8
 # sonar.language 指定了要分析的开发语言（特定的开发语言对应了特定的规则）
 sonar.language=java
 # sonar.java.binaries 需要分析代码的编译后 class 文件位置
-#sonar.java.binaries=${TestModule}/target/classes
-sonar.java.binaries=.
+#sonar.java.binaries=.
+sonar.java.binaries=${TestModule}/target/classes
 # sonar.sources 需要分析的源代码位置（示例中的$WORKSPACE 所指示的是当前 Jenkins 项目的目录）
-sonar.sources=.
+sonar.sources=${TestModule}/src
 # sonar.core.codeCoveragePlugin 指定统计代码覆盖率工具
 sonar.core.codeCoveragePlugin=jacoco
 # sonar.jacoco.reportPaths 覆盖率结果文件路径
