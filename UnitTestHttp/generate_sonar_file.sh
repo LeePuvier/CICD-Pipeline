@@ -24,6 +24,10 @@ sonar.projectName=${JOB_NAME}_${CaseBranch}_UnitTest
 sonar.projectVersion=${projectVersion}
 # sonar.sourceEncoding 源码编码格式
 sonar.sourceEncoding=UTF-8
+# SonarQube 访问地址，根据实际情况填写
+sonar.host.url=http://172.17.0.3:9000
+# token，在 SonarQube 中创建的 token，只有 SonarQube 开起了强制用户认证，才需要 token，默认情况下，强制用户认证是关闭的。
+sonar.login=1a8242191971dcd3abc1397e08b1e38de39cd491
 # sonar.language 指定了要分析的开发语言（特定的开发语言对应了特定的规则）
 sonar.language=java
 # sonar.java.binaries 需要分析代码的编译后 class 文件位置
