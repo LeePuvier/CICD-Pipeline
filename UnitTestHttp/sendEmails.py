@@ -22,7 +22,7 @@ def send(to_list,cc_list,sub,content,file):
 
 
     username = '877290202@qq.com'
-    password = 'bvgrtgcbkzqpbebd'
+    password = 'bbgrtgcbkzqfcebd'
     # _subtype 可以设为html,默认是plain
     # msg = MIMEText(content, _subtype='plain')
     # msg = MIMEText(content, _subtype='html')
