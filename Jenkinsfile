@@ -23,7 +23,7 @@ pipeline {
 							//withMaven(maven: 'maven') {        
 								script {
 									try {
-										sh "mvn clean test"
+										sh "mvn org.jacoco:jacoco-maven-plugin:prepare-agent -f pom.xml clean test -Dautoconfig.skip=true -Dmaven.test.skip=false -Dmaven.test.failure.ignore=true"
 									} catch (exc) {
 										echo 'Some TestCase failed'
 									}
@@ -65,7 +65,7 @@ pipeline {
 				dir('code') {
 					script {
 						if(!"".equals(env.ClassInclusions)){
-							jacoco inclusionPattern:ClassInclusions
+							jacoco changeBuildStatus: true, maximumLineCoverage:70, inclusionPattern:ClassInclusions
 						}else{
 							jacoco()
 						}
